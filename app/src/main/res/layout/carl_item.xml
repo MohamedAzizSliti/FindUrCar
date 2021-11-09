@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+            android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/Id_image"
+        android:layout_width="139dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center"
+        android:src="@drawable/wagonr" />
+
+    <TextView
+            android:id="@+id/Id_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bmw8"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/prix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="price : eur 1200 eur/day"
+            android:textAlignment="center" />
+
+    </LinearLayout>

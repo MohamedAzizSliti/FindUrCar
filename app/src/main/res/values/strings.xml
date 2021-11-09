@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FindUrCar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="new_car">NEW CAR</string>
+    <string name="bmw8">BMW8</string>
+    <string name="price_in_eur_75_508">Price in EUR-: 75,508</string>
+    <string name="maruti_suzuki_wagon">Maruti Suzuki Wagon</string>
+    <string name="renaulte_clio">Renaulte Clio</string>
+    <string name="price_eur_100_eur_day">price : eur 100 eur/day</string>
+    <string name="profile">profile</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_cars">Cars</string>
+    <string name="cars">Cars</string>
+</resources>
