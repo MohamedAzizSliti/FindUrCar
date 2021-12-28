@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.home;
+package com.example.myapplication.client.ui.cars;
 
 public class Car {
     private int image;

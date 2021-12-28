@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.details;
+package com.example.myapplication.client.ui.details;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplication.MainActivity;
+import com.example.myapplication.client.MainActivity;
 import com.example.myapplication.R;
 
 public class Detail extends AppCompatActivity {

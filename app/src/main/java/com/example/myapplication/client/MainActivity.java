@@ -1,18 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.client;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.service.quicksettings.Tile;
 
-import com.example.myapplication.ui.home.HomeFragment;
-import com.example.myapplication.ui.profile.ProfileFragment;
+import com.example.myapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;

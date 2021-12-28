@@ -10,4 +10,6 @@
     <color name="grey">#808080</color>
     <color name="backcolor">#FBFFF9</color>
     <color name="manaarech">#CB0188</color>
+    <color name="btn_color">#0D1137</color>
+
 </resources>

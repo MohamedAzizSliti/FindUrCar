@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/background_btn.xml" value="0.1388888888888889" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/card.xml" value="0.1265625" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/costum.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/costumCar.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/costumbtn.xml" value="0.1265625" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/costumcar.xml" value="0.1265625" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/costumprofile.xml" value="0.1265625" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1265625" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1388888888888889" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1388888888888889" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.24379232505643342" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/carH_item.xml" value="0.25" />
@@ -18,9 +23,11 @@
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_dashboard.xml" value="0.1272644927536232" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_notifications.xml" value="0.1094224924012158" />
-        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_profile.xml" value="0.1094224924012158" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/listcar_item.xml" value="0.25" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/layout/search_fragment.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/menu/bottom_nav_menu.xml" value="0.225" />
+        <entry key="..\:/Users/aziz/AndroidStudioProjects/MyApplication/app/src/main/res/menu/exemple_menu.xml" value="0.225" />
       </map>
     </option>
   </component>

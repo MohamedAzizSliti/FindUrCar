@@ -1,9 +1,11 @@
-package com.example.myapplication.ui.cars;
+package com.example.myapplication.client.ui.cars;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,18 +13,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.ui.details.Detail;
-import com.example.myapplication.ui.home.Car;
+import com.example.myapplication.client.ui.details.Detail;
+import com.example.myapplication.client.ui.home.Car;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterCar extends RecyclerView.Adapter<AdapterCar.Viewholder> {
+public class AdapterCar extends RecyclerView.Adapter<AdapterCar.Viewholder> implements Filterable {
+    List<com.example.myapplication.client.ui.home.Car> cars;
+    private List<com.example.myapplication.client.ui.home.Car> carsList;
+    public AdapterCar(List<Car> cars) {
 
-    public AdapterCar(List<com.example.myapplication.ui.home.Car> cars) {
         this.cars = cars;
+        carsList=new ArrayList<>(cars);
     }
 
-    List<com.example.myapplication.ui.home.Car> cars;
+
+
 
 
     @NonNull
@@ -58,6 +65,7 @@ public class AdapterCar extends RecyclerView.Adapter<AdapterCar.Viewholder> {
         return cars.size();
     }
 
+
     class Viewholder extends RecyclerView.ViewHolder{
         private TextView title;
         private ImageView image;
@@ -72,6 +80,40 @@ public class AdapterCar extends RecyclerView.Adapter<AdapterCar.Viewholder> {
         }
 
     }
+    @Override
+    public Filter getFilter() {
+        return carFilter;
+    }
+    private Filter carFilter= new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Car> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(carsList);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (Car item : carsList) {
+                    if (item.getTitle().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            cars.clear();
+            cars.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
 }
 

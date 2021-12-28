@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.home;
+package com.example.myapplication.client.ui.home;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,13 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.ui.details.Detail;
+import com.example.myapplication.client.ui.details.Detail;
 
 import java.util.List;
 
-public class AdapterCarH extends RecyclerView.Adapter<AdapterCarH.Viewholder> {
+public class AdapterCar extends RecyclerView.Adapter<AdapterCar.Viewholder> {
 
-    public AdapterCarH(List<Car> cars) {
+    public AdapterCar(List<Car> cars) {
         this.cars = cars;
     }
 
@@ -28,7 +28,7 @@ public class AdapterCarH extends RecyclerView.Adapter<AdapterCarH.Viewholder> {
     @Override
     public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.car_item, parent, false);
+                .inflate(R.layout.carh_item, parent, false);
         Viewholder viewHolder = new Viewholder(view);
         return viewHolder;
     }
@@ -64,7 +64,7 @@ public class AdapterCarH extends RecyclerView.Adapter<AdapterCarH.Viewholder> {
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             title =itemView.findViewById(R.id.Id_title);
-            prix =itemView.findViewById(R.id.prix);
+            prix =itemView.findViewById(R.id.Id_prix);
             image =itemView.findViewById(R.id.Id_image);
 
 
