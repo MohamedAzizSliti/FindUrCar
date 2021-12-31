@@ -1,49 +1,46 @@
 package com.example.myapplication.admin;
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.ActionBar;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.Fragment;
+
+import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.myapplication.R;
-import com.example.myapplication.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new UserFragment()).commit();
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home,R.id.navigation_profile,R.id.navigation_cars)
-                .build();
+                switch (item.getItemId()){
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-//        actionBar.setHomeButtonEnabled(true);
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-//        ColorDrawable colorDrawable
-//                = new ColorDrawable(Color.parseColor("#0F9D58"));
-//
-//        // Set BackgroundDrawable
-//        actionBar.setBackgroundDrawable(colorDrawable);
+                    case R.id.user:
+                        fragment= new UserFragment();
+                        break;
+                    case R.id.car:
+                        fragment= new CarFragment();
+                        break;
+                    case R.id.agence:
+                        fragment=new AgenceFragment();
+                        break;
+                }
 
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,fragment).commit();
+                return true;
+            }
+        });
     }
-
 }

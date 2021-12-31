@@ -4,6 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register">
+    android:padding="20dp"
+    tools:context=".register"
+    android:background="@drawable/cardlogin">
 
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_lastname"
+        style="@style/input_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Write your user name"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_homme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Homme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+    <Switch
+        android:id="@+id/switch_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_homme"
+        app:layout_constraintLeft_toRightOf="@id/tv_homme"
+        app:layout_constraintTop_toTopOf="@id/tv_homme" />
+
+    <TextView
+        android:id="@+id/tv_femme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Femme"
+        app:layout_constraintBottom_toBottomOf="@id/switch_gender"
+        app:layout_constraintLeft_toRightOf="@id/switch_gender"
+        app:layout_constraintTop_toTopOf="@id/switch_gender" />
+
+    <EditText
+        android:id="@+id/edt_firstname"
+        style="@style/input_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Write your email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/edt_lastname" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        style="@style/input_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Write your password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/edt_firstname" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rectange_purple_200"
+        app:layout_constraintTop_toBottomOf="@id/tv_homme">
+
+        <TextView
+            android:id="@+id/tv_valider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Submit"
+            android:textSize="24sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_homme">
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
