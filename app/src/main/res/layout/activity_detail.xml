@@ -77,5 +77,20 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectange_purple_200"
+            android:foregroundGravity="left"
+            android:text="RENT" />
+    </LinearLayout>
+
 
 </LinearLayout>
